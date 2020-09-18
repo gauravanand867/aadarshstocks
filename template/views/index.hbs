@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/index_style.css">
+    <link rel="icon" href="/img/web.png" type="image/icon type">
+    <title>Aadarsh-Stocks</title>
+    <style>
+        @keyframes mymove
+        {
+            0% { left : 100%}
+            100% {left : {{notice.width}};}
+        }
+    </style>
+</head>
+<body>
+    
+    <section class = 'header'>
+        
+        <strong class="title"><a href="/" class="headerTitle" onclick="Going to Home...">AADARSH-STOCKS</a><a class="faqs" href="/faqs">FAQs</a></strong>
+        
+    </section>
+    
+    <section class = "main-content">
+        <div class="covidUpdate" style="background-color: {{notice.bgcolor}};">
+            <div class="covidText" style="animation : mymove {{notice.time}} linear infinite;"><a href="{{notice.link}}" style="color: {{notice.color}};text-decoration : none;">{{notice.text}}</a></div>
+        </div>
+        <div class="bannerSlide">
+            <img src="/icons/arrowL.png" alt="Left" id="preBtn">
+            <img src="/icons/arrowR.png" alt="Right" id="nextBtn">
+            <div class="imageContainer">
+                <img src="/publicCarousel/{{firstImg}}" alt="banner" class="bannerImg 1 primary {{first}}" style="visibility: visible;">
+            </div>
+        </div>
+        {{#if carousel}}
+            {{#each carousel}}
+                <img src="/publicCarousel/{{this.name}}" alt="banner" class="bannerImg hidden {{this.name}}" style="display : none;">
+            {{/each}}
+        {{/if}}
+        <center>
+            <a href="/login" class="log"><div class="login">Login</div></a>
+            <a href="/register" class="reg"><div class="register">Sign Up</div></a>
+        </center>
+        <div class="disclaimer-index">
+            <p class="disclaimer-content-index">
+                <strong style="text-decoration: underline;" class="disclaimerHeader">WELCOME TO AADARSH-STOCKS</strong><br><br>
+                <ul>
+                    <li class="disclaimerList"> At Aadarsh-Stocks we choose some of the best and ideal stocks (aadarsh stocks) for your portfolio. </li>
+                    <li class="disclaimerList"> WE as a team of technical analysts with the help of new technologies chhose some of the best suited stocks. </li>
+                    <li class="disclaimerList"> All stocks are suited for positional/swing trade and are subject to your own research before you invest. </li>
+                    <li class="disclaimerList"> We have an aim to reach all those beginners who can't afford huge amount of money to learn. </li>
+                </ul><br><br>
+                
+                <strong style="text-decoration: underline;" class="disclaimerHeader">WHAT YOU GET AFTER JOINING US</strong><br><br>
+                <ul>
+                    <li class="disclaimerList"> Daily market view </li>
+                    <li class="disclaimerList"> Daily stocks for positional trades* </li>
+                    <li class="disclaimerList"> Selected videos for learning technical analysis </li>
+                    <li class="disclaimerList"> Access to a private telegram group where you can discuss with other traders </li>
+                    <li class="disclaimerList"> Weekly webinar for discussion of concepts </li>
+                    <li class="disclaimerList"> Doubt discussion twice in a week </li>
+                    <li class="disclaimerList"> Constant support on your other holdings </li>
+                </ul><br>
+                <i><strong>* WE are not a sebi registered advisor. Consult your financial advisor/do your own research before investing.</strong> </i><br><br><br>
+
+
+                <strong style="text-decoration: underline;" class="disclaimerHeader"> HOW TO  SUCCEED IN STOCK MARKET </strong><br><br>
+                <ul>
+                    <li class="disclaimerList"> Keep learning </li>
+                    <li class="disclaimerList"> Look at stock market as your secondary source of income atleast for few starting years. </li>
+                    <li class="disclaimerList"> Control your emotions. </li>
+                    <li class="disclaimerList"> Be disciplined. </li>
+                    <li class="disclaimerList"> Finally we are here to help you. </li>
+                </ul>
+                <br><br><br><br>
+            </p>
+        </div>  
+        </section>
+
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f4ca8604704467e89eaee5b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+    <section class = "footer">
+        {{>footer}}
+    </section>
+
+    <script src="/loader.js" type="text/javascript"></script>
+    <script src="/carousel.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+input[placeholder]{
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.header select{
+    border : 2px solid rgb(255, 225, 50);
+    border-radius: 7px;
+    padding-left: 7%;
+    padding-right: 3%;
+    background-color: antiquewhite;
+}
+.form{
+    width : 400px;
+    margin: auto;
+    position:relative;
+    top : 6.5rem;
+}
+.form [type=email],.loginPassword{
+    border : 3px solid green;
+    height : 42px;
+    width : 394px;
+    border-radius : 21px;
+    margin-bottom: 1em;
+    background-color: #f5f5dc;
+}
+.form button{
+    background-image: linear-gradient(yellow,red);
+    border : 3px solid green;
+    border-radius : 21px;
+    height : 42px;
+    width : 200px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: black;
+}
+.form h4{
+    font-size: 40px;
+    color: rgba(97, 5, 105, 1);;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0.1vw 0.1vh 01vh aqua;
+}
+input[placeholder]{
+    font-weight: bolder;
+    padding-left: 30px;
+}
+.form select,.form label{
+    position:relative;
+    left: 20px;
+}
+.form label{
+    font-size: 19.5px;
+    font-family: arial;
+    font-weight: bold;
+}
+.form select{
+    border : 3px solid brown;
+    height: 42px;
+    border-radius : 21px;
+    width : 169.15px;
+    padding-left:8px;
+    background-color: #f5f5dc;
+    font-size : 20px;
+    font-weight:bold;
+    color : teal;
+}
+.stock-display-input input{
+    border : 3px solid brown;
+    border-radius : 8px;
+    height : 40px;
+    width : calc((100% - 25px)/7);
+    display: inline-block;
+    background-color: aqua;
+}
+.stock-display-input input[placeholder]{
+    font-weight: bolder;
+    padding-left: 1%;
+}
+.add-to-database,.add-row{
+    border : 3px solid brown;
+    border-radius : 8px;
+    height : 2.3rem;
+    width : 14.33rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.add-to-database{
+    width: 250px;
+    background-image: linear-gradient(yellow,red);
+    border-radius : 1.15rem;
+    font-size : 15px;
+}
+.add-row{
+    width : 250px;
+    background-image: linear-gradient(yellow,red);
+    border-radius : 1.15rem;
+    font-size : 15px;
+}
+.stocklabel {
+    font-size : 18px;
+}
+.stock-entry-date h4{
+    font-size : 135%;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.stock-entry-date input{
+    border : 3px solid rgb(119, 5, 5);
+    border-radius: 17.5px;
+    height : 35px;
+    width : 150px;
+    padding-left: 60px;
+}
+.para1-stock,.para2-stock{
+    border : 3px solid brown;
+    border-radius : 0.8vw;
+    height: 200px;
+    width: 380px;
+    margin-left : 8px;
+    background-color: aqua;
+    text-overflow: ellipsis;
+}
+.para1-stock{
+    margin-left: calc((100% - 830px)/2);
+}
+
+#loginChoice{
+    position: relative;
+    top : -8.7px;
+    height : 38px;
+    border-radius: 19px;
+    font-weight :bold;
+    font-size: 20px;
+}
+.para1,.para2{
+    font-size : 120%;
+    text-shadow: 0.1vw 0.1vh 01vh white;
+    word-wrap: break-word;
+}
+/*/////////////////////////////// Change Password ///////////////////////////////*/
+.changePassword h4{
+    font-size: 40px;
+    color: rgba(97, 5, 105, 1);;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0.1vw 0.1vh 01vh aqua;
+}
+#password1,#password2,#password3{
+    border : 3px solid green;
+    height : 42px;
+    width : 394px;
+    border-radius : 21px;
+    margin-bottom: 1em;
+    background-color: #f5f5dc;
+}
+.changePasswordSubmit{
+    background-image: linear-gradient(yellow,red);
+    border : 3px solid green;
+    border-radius : 21px;
+    height : 42px;
+    width : 200px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: black;
+}
+/*///////////////////////////////////////////////////////////////////////////////*/
+input[placeholder]:focus,select:focus,button:focus{
+    border: 3px dashed green;
+    outline: 0;
+}
+input::invalid{
+    border : 3px dotted red;
+}
+.message{
+    font-size : 20px;
+}
+.errorMessage{
+    font-size : 18px;
+    color : red;
+    width: fit-content;
+}
+.stockViewDate{
+    font-size : 1vw;
+    border-bottom : 3px solid brown;
+    padding : 0 8px;
+    border-radius : 10px;
+    color : green;
+    font-weight : bold;
+}
+/* Change Password */
+#cpmessage{
+    width : fit-content;
+    font-size : 120%;
+}
+.stock-display1{ 
+    background-color : silver;
+    border : 3px dashed black;
+    margin-top : 10px;
+    padding : 10px 50px;
+    display : grid;
+    grid-auto-rows: minmax(30px,auto);
+    grid-template-columns: 270px 40px calc((100% - 310px));
+    border: 2px solid black;
+    word-break : break-word;
+    grid-gap : 1px;
+    border-radius : 20px
+   
+}
+#link{
+    border : 3px solid brown;
+    border-radius : 8px;
+    height : 40px;
+    width : 380px;
+    margin-left : calc((100% - 530px)/2);
+    background-color: aqua;
+}
+#submitLink{
+    border : 3px solid brown;
+    border-radius : 20px;
+    height : 35px;
+    width : 150px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(yellow,red);
+}
+.linkDis{
+    font-size : 18px;
+    color : crimson;
+}
+.linkDisplay{
+    width : 533px;
+    margin-left : calc((100% - 400px)/2)
+}
+.link{
+    font-size : 115%;
+    outline : none;
+    padding-left : 1%;
+}
+.homeLink{
+    font-size : 20px;
+}
+.palletteElements{
+    display : inline-block;
+    padding : 15px 10px;
+    width : 150px;
+    border : 3px solid green;
+    border-radius : 15px;
+}
+.homepallette{
+    width : 550px;
+}
+.pair{
+    margin-left: 70px;
+}
+a{
+    text-decoration : none;
+}
+.homeUser{
+    font-size : 30px;
+    color : saddlebrown;
+    content : ' ';
+    clear : both;
+    display : table;
+}
+.planExpiry{
+    float : right;
+    margin-right : 4%;
+}
+.subscription{
+    float: left;
+    margin-left : 4%;
+}
+.subscription,.planExpiry{
+    font-size : 110%;
+    color : brown;
+    border : 2px solid;
+    padding : 4px 15px;
+    border-radius : 8px;
+    background-color : bisque;
+    animation: blink .5s infinite;
+}
+@keyframes blink{
+    0% {background-color: bisque;}
+    70% {
+        background-color: orange;
+        color : black;
+    }
+    100% {
+        background-color: bisque;
+    }
+}
+.forgotSummary{
+    font-size : 130%;
+    font-weight : bold;
+    color : brown;
+}
+.forgotBody{
+    font-size : 115%;
+    font-weight:600;
+    color : chocolate;
+}
+.subscriptionWarning{
+    font-size : 120%;
+    color : red;
+    text-decoration :underline;
+}
+.prevPayDetails{
+    width : fit-content;
+    margin : auto;
+}
+.palletteElements:hover{
+    background-color : skyblue;
+    color : red;
+    filter : invert(1%)
+}
+.refernearn{
+    animation : blink2 2s infinite;
+}@keyframes blink2{
+    0% {background-color: inherit;}
+    70% {
+        background-color: beige;
+        color : black;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+@keyframes blink{
+    0% {background-color: bisque;}
+    70% {
+        background-color: orange;
+        color : black;
+    }
+    100% {
+        background-color: bisque;
+    }
+}

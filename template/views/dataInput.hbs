@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/img/web.png" type="image/icon type">
+    <link rel="stylesheet" href="/css/index_style.css">
+    <link rel="stylesheet" href="/css/login_style.css">
+    <title>Data-Input</title>
+</head>
+<body>
+    <section class="header">
+        <strong class="title"><a href="/" class="headerTitle" onclick="myfunction('Going to Home...')">AADARSH-STOCKS</a></strong>
+        {{>authenticatedHeader}}
+    </section>
+    <section class="main-content">
+            <br><br><br><br>
+            <div class = 'stock-entry-date'>
+                <form action="/home/dataInput/date" method="post" onchange="myfunction('Checking Database for older data ...')">
+                    <center>
+                        <h4>Select date corresponding to stock data entry : </h4>
+                        <input type="date" name="stockEntryDate" id="stock-entry-date" onchange="this.form.submit()"><br>
+                    </center>
+                </form>
+            </div>
+            {{#if stock.date}}
+                <center><br><strong class="stockViewDate">Date : {{stock.date}}</strong><br><br></center>
+            {{/if}}
+            <form action="/home/dataInput/data" method="post" enctype="multipart/form-data" onsubmit="myfunction('Compiling data ...')">
+                <center>
+                    <br><strong class="stocklabel">Choose the spreadsheet containing stock-data : </strong>
+                    <input type="file" name="xlsx" id="xlsx " class="xlsx" oninput="this.form.submit()"><br><br>
+                    <button type="submit" class = "add-row" onclick="this.form.submit()">Add Stocks</button>
+                </center><br><br>
+            </form><center><strong class="errorMessage">{{message}}</strong></center>
+            {{#if stock.data}}
+                <div class="stockDisplayBox">
+                <div class = "stock-display">               
+                    <strong class = "stock-display-headers">Stock Name</strong>
+                    <strong class = "stock-display-headers">Buy above</strong>
+                    <strong class = "stock-display-headers">Target</strong>
+                    <strong class = "stock-display-headers">Stop Loss</strong>
+                    <strong class = "stock-display-headers">Recent High</strong>
+                    <strong class = "stock-display-headers">Recent Low</strong>
+                    {{#if stock.data}}
+                        {{#each stock.data}}
+                            <h8 class = "stock-display-items row${length}">{{this.stockName}}</h8>
+                            <h8 class = "stock-display-items row${length}">{{this.buyAbove}}</h8>
+                            <h8 class = "stock-display-items row${length}">{{this.target}}</h8>
+                            <h8 class = "stock-display-items row${length}">{{this.stopLoss}}</h8>
+                            <h8 class = "stock-display-items row${length}">{{this.recentHigh}}</h8>
+                            <h8 class = "stock-display-items row${length}">{{this.recentLow}}</h8>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                </div><br><br>
+                
+                <div class="linkDisplay">
+                    {{#if stock.link}}
+                        {{#each stock.link}}
+                            <strong class="linkDis">Link{{@index}} : <a href="{{this.hyperlink}}"></a>{{this.hyperlink}}</strong><br>
+                        {{/each}}
+                    {{/if}}
+                </div>
+                <br><br>
+                <form action="/home/dataInput/stockData" method="post" onsubmit="myfunction('Adding stocks to database ...')">
+                    <div class = "stock-display-para">
+                        <strong style="text-decoration: underline;font-size : 24px;text-shadow: 0.1vw 0.1vh 01vh white;">EDITOR'S NOTE :</strong>
+                        <br><br><p class = "para1" style="text-align: justify;">1. {{stock.para1}} </p><br><br>
+                        <p class = "para1" style="text-align: justify;">2. {{stock.para2}}<p><br><br>
+                    </div>
+                    <br><br><center><button class = "add-to-database" onclick="this.form.submit()">Add to Database</button></center><br><br>
+                </form>
+            {{/if}}
+    </section>
+
+
+    <section class="footer">
+        {{>footer}}
+    </section>
+    <script src="/loader.js" type="text/javascript"></script>
+</body>
+</html>
